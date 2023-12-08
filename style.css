@@ -159,7 +159,7 @@
   /*同上*/
   transform: perspective(600px) rotateY(0deg);
 }
-@media (min-width: 770px) and (max-width: 1024px) {
+@media (min-width: 800px) and (max-width: 1024px) {
   .container {
     column-count: 2;
     padding-left: 7%;
@@ -179,7 +179,7 @@
     height: 370px;
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 800px) {
   .container {
     column-count: 1;
     padding-left: 12%;
@@ -325,7 +325,7 @@
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .box-text,
   .custom {
     width: 40%;
@@ -339,6 +339,8 @@
     order: 3;
   }
 }
+
+
 
 /*  传   统   技   艺  */
 #wrap {
@@ -422,7 +424,7 @@ input[type="submit"] {
   margin-botton: 60px;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 800px) {
   form {
     width: 90%;
     font-family: syst;

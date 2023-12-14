@@ -1,47 +1,163 @@
 <!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+    <meta name="author" content="Webpixels">
     <title>中国传统制茶技艺</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link type="text/css" href="css/theme.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript" src="function.js"></script>
   </head>
 
   <body>
     <div class="nav">
       <a href="index.html"><img src="image/logo.png" width="100px" /></a>
+      <image src="image/content.svg" class="ml" onclick="showMenu()" id="open">
+      <image src="image/close.svg" class="ml" onclick="hideMenu()" id="close">
       <ul>
 	<li class="crumb"><a class="crumb" href="begin.html">首页</a></li>
         <li class="crumb"><a class="crumb" href="overview.html">项目概述</a></li>
         <li class="crumb"><a class="crumb" href="history.html">发展历史</a></li>
         <li class="crumb"><a class="crumb" href="skill.html">传统技艺</a></li>
-        <li class="crumb"><a class="crumb" href="#">价值意义</a></li>
-        <li class="crumb"><a class="crumb" href="#">保护传承</a></li>
+        <li class="crumb"><a class="crumb" href="value.html">价值意义</a></li>
+        <li class="crumb"><a class="crumb" href="protect.html">保护传承</a></li>
         <li class="crumb current"><a class="crumb" href="#">更 多</a></li>
       </ul>
     </div>
-
-    <div class="bg">
-      <form>
-        <h1 style="text-align: center">更 多<br /><br /></h1>
-        <label for="name">用户名： </label>
-        <input type="text" id="name" name="name" required />
-        <br /><br />
-        <label>性别： </label>
-        <input type="radio" id="male" name="gender" value="male" checked />
-        <label for="male">男</label>
-        <input type="radio" id="female" name="gender" value="female" />
-        <label for="female">女</label>
-        <br /><br />
-        <label for="info">你对中国的茶文化还有其他了解吗：<br /></label>
-        <textarea id="info" name="info" style="height: 200px"></textarea>
-        <br /><br /><br />
-        <input type="submit" value="提 交" />
-      </form>
+    <div class="menu" id="menu">
+      <ul>
+	<li><a href="begin.html">首页</a></li>
+        <li><a href="overview.html">项目概述</a></li>
+        <li><a href="history.html">发展历史</a></li>
+        <li><a href="skill.html">传统技艺</a></li>
+        <li><a href="value.html">价值意义</a></li>
+        <li><a href="protect.html">保护传承</a></li>
+        <li><a class="current" href="#">更 多</a></li>
+      </ul>
     </div>
 
+
+    <main class="main">
+      <section class="slice slice-xl">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-7">
+              <div class="text-center pt-lg-md">
+                <h2 class="heading h1 mb-4">
+                  了解更多
+                </h2>
+                <p class="lead lh-180">
+                  中国茶文化世代传承，至今贯穿于中国人的日常生活、仪式和节庆活动中。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slice bg-tertiary bg-cover bg-size--cover" style="background-image: url('../assets/images/backgrounds/img-1.jpg')">
+        <span class="mask bg-tertiary alpha-9"></span>
+        <div class="container">
+          <div class="row cols-xs-space cols-sm-space cols-md-space">
+            <div class="col-lg-6">
+              <div class="card bg-dark alpha-container text-white border-0 overflow-hidden">
+                <a href="#" target="_blank">
+                  <div class="card-img-bg" style="background-image: url('image/首图1.jpg');"></div>
+                  <span class="mask bg-dark alpha-5 alpha-4--hover"></span>
+                  <div class="card-body px-5 py-5">
+                    <div style="min-height: 300px;">
+                      <h3 class="heading h1 text-white mb-3">视频资料</h3>
+                      <p class="mt-4 mb-1 h5 text-white lh-180">
+                        来源：<br />中国非物质文化遗产网
+                      </p>
+                    </div>
+                    <span href="#" class="text-white text-uppercase font-weight-500">
+                      点击查看
+                      <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card bg-dark alpha-container text-white border-0 overflow-hidden">
+                <a href="#" target="_blank">
+                  <div class="card-img-bg" style="background-image: url('image/newtea.jpg');"></div>
+                  <span class="mask bg-dark alpha-5 alpha-4--hover"></span>
+                  <div class="card-body px-5 py-5">
+                    <div style="min-height: 300px;">
+                      <h3 class="heading h1 text-white mb-3">新式茶饮</h3>
+                      <p class="mt-4 mb-1 h5 text-white lh-180">
+                        茶文化登陆现代，<br />衍生出了更多新玩法
+                      </p>
+                    </div>
+                    <span href="#" class="text-white text-uppercase font-weight-500">
+                      点击查看
+                      <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slice slice-lg">
+        <div class="container">
+          <div class="row align-items-center cols-xs-space cols-sm-space cols-md-space">
+            <div class="col-lg-6">
+              <h3 class="heading h3 mb-4">联系我们</h3>
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input class="form-control" placeholder="姓名" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input class="form-control" placeholder="邮箱" type="email">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5" placeholder="您的建议"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <button type="submit" class="btn btn-primary px-4">
+                    发送邮件
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-5 ml-lg-auto">
+              <h3 class="heading heading-3 strong-300">
+                上海市长宁区天山路街道<br />延安西路1882号
+              </h3>
+              <p class="lead mt-4 mb-4">
+                Email: Healer_119@mail.com
+                <br>
+                Tel: 20-231214
+              </p>
+              <p class="">
+                非物质文化遗产是文化多样性中最富活力的重要组成部分，是人类文明的结晶和最宝贵的共同财富，承载着人类的智慧、人类历史的文明与辉煌。                   
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
     <div class="footer">
-      <h4><br />Copyright © HEALER<br /><br /></h4>
+	<h4>Copyright © HEALER<br />
+	    All rights reserved.</h4>
     </div>
   </body>
 </html>

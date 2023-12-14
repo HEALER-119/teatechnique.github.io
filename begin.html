@@ -5,24 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中国传统制茶技艺</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script language="javascript" type="text/javascript" src="function.js"></script>
   </head>
 
   <body>
+
     <div class="nav">
-      <a href="index.html"><img src="image/logo.png" width="100px;" /></a>
+      <a href="index.html"><img src="image/logo.png" id="logo" /></a>
+      <image src="image/content.svg" class="ml" onclick="showMenu()" id="open">
+      <image src="image/close.svg" class="ml" onclick="hideMenu()" id="close">
       <ul>
 	<li class="crumb current"><a class="crumb" href="#">首页</a></li>
         <li class="crumb"><a class="crumb" href="overview.html">项目概述</a></li>
         <li class="crumb"><a class="crumb" href="history.html">发展历史</a></li>
         <li class="crumb"><a class="crumb" href="skill.html">传统技艺</a></li>
-        <li class="crumb"><a class="crumb" href="#">价值意义</a></li>
-        <li class="crumb"><a class="crumb" href="#">保护传承</a></li>
+        <li class="crumb"><a class="crumb" href="value.html">价值意义</a></li>
+        <li class="crumb"><a class="crumb" href="protect.html">保护传承</a></li>
         <li class="crumb"><a class="crumb" href="more.html">更 多</a></li>
       </ul>
     </div>
+    <div class="menu" id="menu">
+      <ul>
+	<li><a class="current" href="#">首页</a></li>
+        <li><a href="overview.html">项目概述</a></li>
+        <li><a href="history.html">发展历史</a></li>
+        <li><a href="skill.html">传统技艺</a></li>
+        <li><a href="value.html">价值意义</a></li>
+        <li><a href="protect.html">保护传承</a></li>
+        <li><a href="more.html">更 多</a></li>
+      </ul>
+    </div>
 
-    <div>
-      <img src="image/首图.png" width="100%" />
+    <div class="st">
+      <img id="st1" src="image/首图.png" />
+      <img id="st2" src="image/首图(1).jpg" />
     </div>
 
     <div class="bg">
@@ -65,7 +81,7 @@
 
         <div class="cc">
           <div class="card front">
-            <img src="image/茉莉花茶1.jpg" />
+            <img src="image/茉莉花茶.png" />
             <p>花茶制作技艺<br />(福州茉莉花茶窨制工艺)</p>
           </div>
           <div class="back">
@@ -102,7 +118,8 @@
     </div>
 
     <div class="footer">
-      <h4><br />Copyright © HEALER<br /><br /></h4>
+      <h4>Copyright © HEALER<br />
+	    All rights reserved.</h4>
     </div>
   </body>
 </html>

@@ -3,25 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中国传统制茶技艺</title>
+    <title>传统技艺</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script language="javascript" type="text/javascript" src="function.js"></script>
   </head>
 
   <body>
     <div class="nav">
       <a href="index.html"><img src="image/logo.png" width="100px" /></a>
+      <image src="image/content.svg" class="ml" onclick="showMenu()" id="open">
+      <image src="image/close.svg" class="ml" onclick="hideMenu()" id="close">
       <ul>
 	<li class="crumb"><a class="crumb" href="begin.html">首页</a></li>
         <li class="crumb"><a class="crumb" href="overview.html">项目概述</a> </li>
         <li class="crumb"><a class="crumb" href="history.html">发展历史</a></li>
         <li class="crumb current"><a class="crumb" href="#">传统技艺</a></li>
-        <li class="crumb"><a class="crumb" href="#">价值意义</a></li>
-        <li class="crumb"><a class="crumb" href="#">保护传承</a></li>
+        <li class="crumb"><a class="crumb" href="value.html">价值意义</a></li>
+        <li class="crumb"><a class="crumb" href="protect.html">保护传承</a></li>
         <li class="crumb"><a class="crumb" href="more.html">更 多</a></li>
       </ul>
     </div>
+    <div class="menu" id="menu">
+      <ul>
+	<li><a href="begin.html">首页</a></li>
+        <li><a href="overview.html">项目概述</a></li>
+        <li><a href="history.html">发展历史</a></li>
+        <li><a class="current" href="#">传统技艺</a></li>
+        <li><a href="value.html">价值意义</a></li>
+        <li><a href="protect.html">保护传承</a></li>
+        <li><a href="more.html">更 多</a></li>
+      </ul>
+    </div>
+
 
     <div class="bg">
+      <h1 class="head">八 大 传 统 制 茶 工 艺</h1>
       <div id="wrap">
         <ul>
           <li style="background: no-repeat url(image/ld.png)">
@@ -87,7 +103,7 @@
               </p>
             </div>
           </li>
-          <li style="background: no-repeat url(image/xz.png)">
+          <li style="background: no-repeat url(image/xz.png)" class="pic">
             <div class="txt">
               <p>
                 &nbsp;| &nbsp;| <br /><br />
@@ -97,13 +113,24 @@
             </div>
           </li>
         </ul>
-
-        <h1>八 大 传 统 制 茶 工 艺</h1>
+        <h1>八 大 传 统 制 茶 工 艺<br /><br /></h1>
+        <img src="image/process.png" class="process">
+      </div>
+      <div class="skill">
+	<img src="image/ld.png">
+	<img src="image/sq.png">
+	<img src="image/rn.png">
+	<img src="image/mh.png">
+	<img src="image/zq.png">
+	<img src="image/fj.png">
+	<img src="image/wd.png">
+	<img src="image/xz.png">
       </div>
     </div>
 
     <div class="footer">
-      <h4><br />Copyright © HEALER<br /><br /></h4>
+	<h4>Copyright © HEALER<br />
+	    All rights reserved.</h4>
     </div>
   </body>
 </html>

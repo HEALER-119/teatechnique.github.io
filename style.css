@@ -7,30 +7,59 @@
 }
 @font-face {
   font-family: "hwxk";
-  src: url("font/华文行楷.ttf");
+  src: url(font/华文行楷.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "hwkt";
-  src: url("font/华文楷体.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "syst";
-  src: url("font/思源宋体.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "systb";
-  src: url("font/思源宋体粗.otf");
+  src: url(font/华文楷体.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
+
 /*  导   航   栏   */
+#logo{
+   width:100px;
+}
+
+.menu{
+  display: none;
+  background:#969651;
+  width:100%;
+  z-index:998;
+  color: white;
+}
+
+.menu ul li,.menu a{
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  padding: 10px 14px 7px 14px;
+  text-align: center;
+  font-size: 21px;
+  font-family: hwxk;
+  transition:0.3s;
+}
+.menu ul li:hover {
+  background-color: #7c7c26;
+  border-bottom: 3px solid #7c7c26;
+}
+
+.ml{
+  display: none;
+  float: right;
+  cursor: pointer;
+  background-repeat:no-repeat;
+  width:100px;
+  height:48px;
+  z-index:999;
+}
+#close{
+  display: none;
+}
+
 .nav {
   font-size: 24px;
   font-family: hwxk;
@@ -50,6 +79,7 @@
   color: white;
   padding: 15px 14px 10px 14px;
   text-align: center;
+  transition:0.3s;
 }
 .nav ul li:hover {
   background-color: #7c7c26;
@@ -66,6 +96,16 @@
   margin: auto;
 }
 
+.st img{
+  width:100%;
+}
+.st #st1{
+  display: block;
+}
+.st #st2{
+  display: none;
+}
+
 .bg {
   margin-top: 0;
   background-image: url(image/bg.jpg);
@@ -73,19 +113,62 @@
   background-size: 100%;
 }
 
+
+@media (min-width: 770px) and (max-width: 1024px) {
+  #logo{
+    width: 80px;
+  }
+  .nav {
+    font-size: 22px;
+  }
+  .nav ul li {
+    padding: 15px 7px 10px 7px;
+  }
+  .nav ul li:hover {
+    border-bottom: 6px solid #7c7c26;
+  }
+  .current {
+    border-bottom: 6px solid #7c7c26;
+  }
+}
+
+@media (max-width: 770px) {
+  .st #st1{
+    display: none;
+  }
+  .st #st2{
+    display: block;
+  }
+  .nav ul{
+    display:none;
+  }
+  .ml{
+      display: block;
+  }
+  .current {
+    border-bottom: 3px solid #7c7c26;
+  }
+}
+
+
+
+
 /*  翻   转   卡   片  */
 .container {
   margin: auto;
-  justify-content: center;
   width: 80%;
   column-count: 3;
   padding-top: 100px;
   padding-bottom: 50px;
-  padding-left: 3%;
-  padding-right: 3%;
+  position:relative;
+  justify-content:center;
+  align-items:center;
+  transform:translateX(3%);
 }
 
 .card {
+  justify-content:center;
+  align-items:center;
   break-inside: avoid;
   page-break-inside: avoid;
   background-color: #cbc09f;
@@ -159,11 +242,10 @@
   /*同上*/
   transform: perspective(600px) rotateY(0deg);
 }
-@media (min-width: 800px) and (max-width: 1024px) {
+@media (min-width: 770px) and (max-width: 1024px) {
   .container {
     column-count: 2;
-    padding-left: 7%;
-    padding-right: 6%;
+    transform:translateX(3%);
   }
   .card {
     width: 36%;
@@ -179,23 +261,23 @@
     height: 370px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 770px) {
   .container {
     column-count: 1;
-    padding-left: 12%;
-    padding-right: 15%;
+    padding-left: 6%;
   }
   .card {
     width: 50%;
     padding-bottom: 50px;
+    font-size: 16px;
   }
   .front {
-    width: 300px;
-    height: 380px;
+    width: 260px;
+    height: 340px;
   }
   .back {
-    width: 300px;
-    height: 400px;
+    width: 260px;
+    height: 360px;
   }
 }
 
@@ -209,13 +291,15 @@
   border-radius: 10px;
 }
 
+
+
 /*  项  目  概  述  */
 .imgbox {
   column-count: 2;
-  padding: 15px;
+  padding: 25px 55px;
   margin: auto;
   width: 70%;
-  background-color: rgba(72, 110, 70, 0.85);
+  background-color: rgba(72, 110, 70, 0.8);
   border-radius: 20px;
   color: #ffffff;
   font-family: hwkt;
@@ -225,26 +309,59 @@
   padding-bottom: 20px;
 }
 .imgbox td {
+  
+  font-weight：700;
   padding: 25px;
   writing-mode: tb-rl;
 }
 
 .imgbox img {
   width: 100%;
-  padding: 0;
-  margin: 0;
-  border-radius: 25px;
+  margin-top:25px;
+  border-radius: 20px;
 }
 
 .textbox {
   width: 70%;
   margin: auto;
-  font-family: syst;
-  font-size: 16px;
+  font-family: hwkt;
+  font-size: 18px;
   padding: 50px 85px;
   background-color: rgba(150, 150, 81, 0.23);
   border-radius: 30px;
 }
+
+@media (max-width: 770px) {
+  .textbox {
+    width: 90%;
+    font-size: 16px;
+    padding: 50px 35px;
+  }
+  .imgbox img {
+    padding:0px 8px;
+  }
+  .imgbox {
+    column-count: 1;
+    padding: 10px 30px;
+    width: 90%;
+  }
+  .imgbox td {
+    padding:25px 25px 10px 0;
+  }
+}
+@media (min-width: 770px) and (max-width: 1024px) {
+  .imgbox td {
+    padding-right: 10px;
+  }
+  .textbox {
+    padding: 50px 55px;
+  }
+  .imgbox {
+    padding: 10px 30px;
+  }
+}
+
+
 
 /*  发   展   历   史   */
 .map {
@@ -252,24 +369,24 @@
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: #f1faea;
+  background-color: #d4dbb8;
   text-align: center;
 }
 .map h1 {
   padding: 55px;
-  font-size: 48px;
+  font-size: 42px;
   font-family: hwkt;
 }
 
 .wrapper {
-  font-family: syst;
+  font-family: hwkt;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
   flex-wrap: wrap;
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
   padding-bottom: 50px;
 }
@@ -289,14 +406,12 @@
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  background: linear-gradient(#e66465, #9198e5);
   background-image: url(image/map.png);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
   order: 2;
   text-align: center;
-  font-size: 28px;
   flex-basis: 100px;
   color: #fff;
   cursor: pointer;
@@ -305,9 +420,10 @@
   font-size: 20px;
   padding: 10px;
   margin: auto;
-  background: rgba(178, 207, 135, 0.8);
+  background: rgba(126,147,105,0.7);
 }
 .box-text {
+  font-size: 16px;
   text-align: center;
   padding: 20px;
   border-radius: 25px;
@@ -315,7 +431,7 @@
   order: 3;
   width: 100%;
   padding-left: 10px;
-  background: rgba(203, 192, 159, 0.3);
+  background: #f1f1ed;
   margin-bottom: 3%;
   margin-left: 3%;
   cursor: pointer;
@@ -325,10 +441,15 @@
   width: 100%;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 770px) {
+  .map h1 {
+    font-size: 48px;
+  }
+
   .box-text,
   .custom {
     width: 40%;
+    font-size: 18px;
   }
   .box-right .box-text {
     order: 1;
@@ -343,6 +464,14 @@
 
 
 /*  传   统   技   艺  */
+.head{
+  display: none;
+  padding:50px 0 30px 0;
+  font-size:46px;
+  font-family: hwxk;
+  text-align:center;
+  color: #333;
+}
 #wrap {
   max-width: 100%;
   height: 730px;
@@ -385,15 +514,52 @@
   margin-right: 15%;
   color: #333;
 }
+.process{
+  width: 260px;
+  float: right;
+}
+.skill{
+  display: none;
+}
+.skill img{
+  width: 49%;
+}
 
+@media (min-width: 640px) and (max-width: 1000px){
+  #wrap {
+    display: none;
+  }
+  .skill{
+    display: block;
+  }
+  .head{
+    display: block;
+  }
+}
+@media (max-width: 640px){
+  #wrap {
+    display: none;
+  }
+  .skill{
+    display: block;
+    text-align: center;
+  }
+  .head{
+    display: block;
+    font-size:40px;
+  }
+  .skill img{
+    width: 75%;
+  }
+}
 
 
 /*  更    多  */
 form {
-  font-family: syst;
-  font-size: 17px;
+  font-family: hwkt;
+  font-size: 19px;
   padding: 80px 150px;
-  width: 80%;
+  width: 70%;
   height: 88vh;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.4);
@@ -415,21 +581,24 @@ textarea {
 input[type="submit"] {
   background-color: #969651;
   color: white;
-  padding: 12px 15px;
-  font-size: 17px;
+  padding: 10px 15px;
+  font-size: 18px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-left: 47%;
   margin-botton: 60px;
+  font-family: hwkt;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 770px) {
   form {
     width: 90%;
-    font-family: syst;
-    font-size: 15px;
-    padding: 80px 50px;
+    font-size: 17px;
+    padding: 50px 50px 30px 50px;
+  }
+  form h1{
+    font-size: 40px;
   }
   input[type="submit"] {
     margin-left: 40%;
@@ -442,4 +611,6 @@ input[type="submit"] {
   text-align: center;
   color: #f9f5eb;
   clear: both;
+  font-size: 15px;
+  padding: 20px 0;
 }

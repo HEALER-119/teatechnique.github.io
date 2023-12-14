@@ -1,0 +1,136 @@
+.back{
+  margin: auto;
+  width: 90px;
+  height:90px;
+  background-image: url(../image/墨圈.png);
+  background-position: center;
+  background-size: 100%;
+  text-align: center;
+  background-repeat:no-repeat;
+  border-radius:50px;
+  padding: 25px 0;
+}
+
+a{
+  color: #969651;
+  font-size: 30px;
+  font-family: hwkt;
+}
+a:hover{
+  color: #81894E;
+}
+
+@media (max-width: 770px) {
+  .back{
+    width: 70px;
+    height: 70px;
+    padding: 18px 0;
+  }
+  a{
+    font-size: 26px;
+  }
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content:center; 
+  flex-direction:column; 
+  height: 100vh;
+  background-image: linear-gradient(to top, #d1d1b3 0%, #ffffff 100%);	
+  overflow: hidden;
+}
+
+.shell {
+  position: relative;
+  width:60vw; height: 40vw; 
+  max-width:380px; 
+  max-height: 520px; 
+  margin: 0;
+  color: white;	
+  perspective: 1000px;
+  transform-origin:center;
+}
+
+.content {
+  display:flex;
+  justify-content: center; 
+  align-items: center; 
+  position: absolute; 
+  width:100%; 
+  height: 100%;
+  transform-origin:center;
+  transform-style:preserve-3d;
+  transform: translateZ(-30vw) rotateY(0);
+  animation: carousel 18s infinite cubic-bezier(0.77, 0, 0.175,1) forwards;
+}
+
+.item{
+  position: absolute; 
+  width:60vw; 
+  height:70vw;
+  max-width: 380px; 
+  max-height: 520px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  border-radius: 6px;
+  background-size: cover;
+  -webkit-box-reflect: below 25px -webkit-linear-gradient(transparent 50%,rgba(255,255,255,0.3));
+}
+
+.item:nth-child(1){
+  background-image: url(../image/nt1.jpg);
+  transform: rotateY(0) translateZ(35vw);
+}
+.item:nth-child(2){
+  background-image:url(../image/nt2.jpg);
+  transform: rotateY(60deg) translateZ(35vw);
+}
+.item:nth-child(3){
+  background-image: url(../image/nt3.jpg);
+  transform: rotateY(120deg) translateZ(35vw);
+}
+.item:nth-child(4){
+  background-image: url(../image/nt4.jpg);
+  transform: rotateY(180deg) translateZ(35vw);
+}
+.item:nth-child(5){
+  background-image:url(../image/nt5.jpg);
+  transform: rotateY(240deg) translateZ(35vw);
+}
+.item:nth-child(6){
+  background-image: url(../image/nt6.jpg);
+  transform: rotateY(300deg) translateZ(35vw);
+}
+
+
+
+@keyframes carousel {
+  0%,
+  10%{
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  15%,
+  25%{
+    transform: translateZ(-35vw) rotateY(-60deg);
+  }
+  30%,
+  40%{
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  45%,
+  55%{
+    transform: translateZ(-35vw) rotateY(-180deg);
+  }
+  60%,
+  70%{
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  75%,
+  85%{
+    transform: translateZ(-35vw) rotateY(-300deg);
+  }
+  90%,
+  100%{
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
